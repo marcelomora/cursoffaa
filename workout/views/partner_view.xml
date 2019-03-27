@@ -1,0 +1,23 @@
+<odoo>
+    <data>
+        <!-- Inherit Partner Form view -->
+        <record id="view_partner_form_workout_attendee" model="ir.ui.view">
+            <field name="name">view.partner.form.workout.attendee</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <!-- <field name="website" position="replace">
+                    <field name="is_attendee"></field>
+                </field> -->
+                <xpath expr="//notebook" position="inside">
+                    <page string="Workout">
+                        <group>
+                            <field name="is_coach"></field>
+                            <field name="is_attendee"></field>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

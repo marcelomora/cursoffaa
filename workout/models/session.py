@@ -10,7 +10,19 @@ class WorkoutSession(models.Model):
     _name = 'workout.session'
     _description = 'Session schedule for workout classes'
 
-    name = fields.Char("Name")
+    @api.multi
+    def name_get(self):
+        result = []
+        for session in self:
+            result.append(
+                (session.id,
+                "[{}, {}]/{}".format(
+                    session.category_id.name,
+                    session.coach_id.name,
+                    session.session_date)))
+                
+        return result
+    # name = fields.Char("Name")
     coach_id = fields.Many2one(
         string="Coach",
         comodel_name="res.partner",

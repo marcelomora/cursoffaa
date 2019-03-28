@@ -5,8 +5,8 @@
         <field name="model">workout.session</field>
         <field name="arch" type="xml">
             <tree string="Workout Session">
-                <field name="coach_id"/>
                 <field name="category_id"/>
+                <field name="coach_id"/>
                 <field name="session_date"/>
             </tree>
         </field>
@@ -17,11 +17,11 @@
         <field name="arch" type="xml">
             <form string="Session">
                 <sheet>
-                    <div class="oe_title">
+                    <!-- <div class="oe_title">
                     <h1>
                         <field name="name"></field>
                     </h1>
-                    </div>
+                    </div> -->
                     <group>
                         <field name="category_id"/>
                         <field name="coach_id"></field>

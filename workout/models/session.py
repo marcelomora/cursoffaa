@@ -19,13 +19,20 @@ class WorkoutSession(models.Model):
         help="Select coach.",
     )
 
+    category_id = fields.Many2one(
+        string="Category",
+        comodel_name="workout.category",
+        ondelete="restrict",
+        help="Workout Category",
+    )
+
     attendee_ids = fields.Many2many(
         string="Attendees",
         comodel_name="res.partner",
         relation="workout_sessions_attendees",
         column1="session_id",
         column2="partner_id",
-        # domain="[('field', '=', other)]",
+        domain="[('is_attendee', '=', True)]",
         help="List of atendees.",
     )
 

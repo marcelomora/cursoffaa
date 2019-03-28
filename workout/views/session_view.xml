@@ -31,6 +31,9 @@
                         <field name="seats"></field>
                         <field name="taken_seats"></field>
                     </group>
+                    <group>
+                        <field name="attendees_count"></field>
+                    </group>
                     <notebook>
                         <page string="Attendees">
                             <group>

@@ -51,7 +51,10 @@ class WorkoutSession(models.Model):
     session_date = fields.Datetime(string="Date", )
     taken_seats = fields.Integer(string="Taken Seats", )
     seats = fields.Integer(string="Seats", help="Seats available" )
-    attendees_count = fields.Integer(string="Attendees Count", )
+    attendees_count = fields.Integer(
+        string="Attendees Count",
+        compute="_get_attendees_count",
+        store=True )
     available = fields.Boolean(string="Available", )
     price_per_session = fields.Monetary(string="Price Per Session")
     currency_id = fields.Many2one(
@@ -60,3 +63,8 @@ class WorkoutSession(models.Model):
         ondelete="restrict",
         help="Currency.",
     )
+
+    @api.depends('attendee_ids')
+    def _get_attendees_count(self):
+        for session in self:
+            session.attendees_count = len(session.attendee_ids)

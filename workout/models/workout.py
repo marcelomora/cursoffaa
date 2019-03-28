@@ -10,6 +10,7 @@ class WorkoutCategory(models.Model):
         string='Type',
         selection=[
             ('cardio', 'Cardio'),
+            ('relax', 'Relax'),
             ('muscle', 'Muscle'),
             ('endurance', 'Endurance')],
         required=True)

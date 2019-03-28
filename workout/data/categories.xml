@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record model="workout.category" id="pesas">
+        <field name="name">Pesas</field>
+        <field name="type">muscle</field>
+    </record>
+    <record model="workout.category" id="hiit">
+        <field name="name">HIIT</field>
+        <field name="type">cardio</field>
+    </record>
+    <record model="workout.category" id="dance">
+        <field name="name">Baile</field>
+        <field name="type">cardio</field>
+    </record>
+    <record model="workout.category" id="yoga">
+        <field name="name">Yoga</field>
+        <field name="type">relax</field>
+    </record>
+</odoo>

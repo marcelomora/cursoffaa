@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_workout_category,access_workout_category,model_workout_category,base.group_user,1,1,1,1
+access_workout_session,access_workout_session,model_workout_session,base.group_user,1,1,1,0

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="workout_manager" model="res.groups">
+        <field name="name">Workout / Manager</field>
+    </record>
+    <record id="workout_user" model="res.groups">
+        <field name="name">Workout / User</field>
+    </record>
+</odoo>

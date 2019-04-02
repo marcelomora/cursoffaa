@@ -27,6 +27,7 @@
 
     # always loaded
     'data': [
+        'security/workout_groups.xml',
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/partner_view.xml',

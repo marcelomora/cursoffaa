@@ -74,11 +74,4 @@ class WorkoutSession(models.Model):
         for session in self:
             session.attendees_count = len(session.attendee_ids)
 
-    @api.multi
-    def write(self, vals):
-        """ Check write method """
-        if self._context.get('uid') != 1:
-            raise UserError(_("Only Admin User can modify"))
-
-        return super(WorkoutSession, self).write(vals)
 

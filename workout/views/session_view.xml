@@ -25,6 +25,7 @@
                     <group>
                         <field name="category_id"/>
                         <field name="coach_id"></field>
+                        <field name="responsible_id" readonly="1"></field>
                     </group>
                     <group>
                         <field name="session_date"></field>

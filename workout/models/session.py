@@ -69,6 +69,14 @@ class WorkoutSession(models.Model):
         help="Currency.",
     )
 
+    responsible_id = fields.Many2one(
+        string="Responsible User",
+        comodel_name="res.users",
+        ondelete="restrict",
+        help="Responsible User for session.",
+        default=lambda r: r.env.user
+    )
+
     @api.depends('attendee_ids')
     def _get_attendees_count(self):
         for session in self:

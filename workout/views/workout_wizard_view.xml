@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <!-- partner.session form view -->
+    <record id="partner_session_view_form" model="ir.ui.view">
+        <field name="name">partner.session.view.form</field>
+        <field name="model">partner.session</field>
+        <field name="arch" type="xml">
+            <form string="Partner Session Wizard">
+                <group>
+                    <field name="session_wiz_ids"></field>
+                    <field name="attendee_wiz_ids"></field>
+                </group>
+                <footer>
+                    <button name="subscribe" type="object" class="oe_highlight" string="Subscribe"></button>
+                    <button special="cancel" string="Cancel"></button>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <act_window id="launch_session_wizard"
+               name="Add Attendees"
+               src_model="res.partner"
+               res_model="partner.session"
+               view_mode="form"
+               target="new"
+               key2="client_action_multi"></act_window>
+    
+    <menuitem id="menu_launch_session_wizard"
+              name="Add attendees masive"
+              parent="workout.memberslist"
+              action="launch_session_wizard"
+              groups="workout.workout_user"></menuitem>
+</odoo>

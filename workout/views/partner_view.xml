@@ -20,4 +20,22 @@
             </field>
         </record>
     </data>
+
+    <record model="ir.actions.act_window" id="workout.members_action">
+      <field name="name">workout_members_action</field>
+      <field name="res_model">res.partner</field>
+      <field name="domain">[('is_attendee', '=', True)]</field>
+      <field name="context">{'is_attendee': True}</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- menu Customers -->
+    <menuitem name="Members"
+              id="workout.memberslist"
+              parent="workout.menu_root"/>
+
+    <menuitem name="Members"
+              id="workout.members"
+              parent="workout.memberslist"
+              action="workout.members_action"/>
 </odoo>

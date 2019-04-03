@@ -32,6 +32,7 @@
         'views/views.xml',
         'views/partner_view.xml',
         'views/session_view.xml',
+        'views/workout_wizard_view.xml',
         'data/categories.xml',
         # 'views/templates.xml',
     ],

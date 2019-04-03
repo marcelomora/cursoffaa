@@ -54,19 +54,7 @@
       <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- server action to the one above -->
-    <!-- <record model="ir.actions.server" id="workout.action_server">
-      <field name="name">workout_category_tree</field>
-      <field name="model_id" ref="model_workout_category"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record> -->
+
 
     <!-- Top menu item -->
     <menuitem name="Workout" id="workout.menu_root"/>
@@ -79,6 +67,7 @@
               id="workout.category"
               parent="workout.management"
               action="workout.category_action"/>
+
     <!--
     <menuitem name="List" id="workout.menu_1_list" parent="workout.menu_1"
               action="workout.action_window"/>

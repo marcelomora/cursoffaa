@@ -28,6 +28,37 @@ class WorkoutSession(models.Model):
                 
         return result
     # name = fields.Char("Name")
+
+    @api.onchange("session_date")
+    def _onchange_field(self):
+        vals = {}
+
+        if self.session_date != False:
+            self.state = 'closed'
+        else:
+            self.state = 'draft'
+            return vals
+    
+        # Remove warning if necessary
+        if self.session_date < fields.Date.today():
+            vals['warning'] = {
+                'title': _('Date Warning'),
+                'message': _('Date can not be before today')
+            }
+    
+        return vals
+
+    state = fields.Selection(
+        string="State",
+        selection=[
+                ('draft', 'Draft'),
+                ('closed', 'Closed'),
+                ('done', 'Done'),
+                ('cancel', 'Cancel'),
+        ],
+        default='draft',
+    )
+
     coach_id = fields.Many2one(
         string="Coach",
         comodel_name="res.partner",

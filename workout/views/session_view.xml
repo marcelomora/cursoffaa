@@ -12,6 +12,44 @@
             </tree>
         </field>
     </record>
+
+    <record id="kanban_session_view" model="ir.ui.view">
+        <field name="name">workout.session.kanban</field>
+        <field name="model">workout.session</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="session_date"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_card">
+                            <a type="open">
+                                <field name="category_id"></field>
+                            </a>
+                            <div>
+                                <field name="coach_id" />
+                            </div>
+                            <div>
+                                <field name="session_date" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>    
+            </kanban>
+        </field>
+    </record>
+
+    <record id="workout_session_view_calendar" model="ir.ui.view">
+        <field name="name">workout.session.calendar</field>
+        <field name="model">workout.session</field>
+        <field name="arch" type="xml">
+            <calendar date_start="session_date" date_stop="session_date">
+                <field name="category_id"></field>
+                <field name="coach_id"></field>
+            </calendar>
+        </field>
+    </record>
+
+
     <record id="workout_session_view_form" model="ir.ui.view">
         <field name="name">workout.session.form</field>
         <field name="model">workout.session</field>
@@ -54,7 +92,7 @@
     <record model="ir.actions.act_window" id="workout.session_action">
       <field name="name">workout_session_tree</field>
       <field name="res_model">workout.session</field>
-      <field name="view_mode">tree,form</field>
+      <field name="view_mode">kanban,tree,calendar,form</field>
     </record>
 
     <menuitem name="Session"

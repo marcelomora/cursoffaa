@@ -1,0 +1,333 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* workout
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-04-06 16:01+0000\n"
+"PO-Revision-Date: 2019-04-06 16:01+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: workout
+#: model:ir.actions.act_window,name:workout.launch_session_wizard
+msgid "Add Attendees"
+msgstr "Agregar Asistente"
+
+#. module: workout
+#: model:ir.ui.menu,name:workout.menu_launch_session_wizard
+msgid "Add attendees masive"
+msgstr "Agregar assistentes masivo"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_res_partner_is_attendee
+#: model:ir.model.fields,field_description:workout.field_res_users_is_attendee
+msgid "Attendee"
+msgstr "Asitente"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_attendee_wiz_ids
+#: model:ir.model.fields,field_description:workout.field_workout_session_attendee_ids
+#: model:ir.ui.view,arch_db:workout.workout_session_view_form
+msgid "Attendees"
+msgstr "Asistentes"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_attendees_count
+msgid "Attendees Count"
+msgstr "Conteo de asistentes"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_available
+msgid "Available"
+msgstr "Disponible"
+
+#. module: workout
+#: model:ir.ui.view,arch_db:workout.partner_session_view_form
+#: selection:workout.session,state:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: workout
+#: selection:workout.category,type:0
+msgid "Cardio"
+msgstr "Cardio"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_category_id
+#: model:ir.ui.menu,name:workout.category
+msgid "Category"
+msgstr "Categoría"
+
+#. module: workout
+#: selection:workout.session,state:0
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_res_partner_is_coach
+#: model:ir.model.fields,field_description:workout.field_res_users_is_coach
+#: model:ir.model.fields,field_description:workout.field_workout_session_coach_id
+msgid "Coach"
+msgstr "Entrenador"
+
+#. module: workout
+#: model:ir.model,name:workout.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_create_uid
+#: model:ir.model.fields,field_description:workout.field_workout_category_create_uid
+#: model:ir.model.fields,field_description:workout.field_workout_session_create_uid
+msgid "Created by"
+msgstr "Creado por:"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_create_date
+#: model:ir.model.fields,field_description:workout.field_workout_category_create_date
+#: model:ir.model.fields,field_description:workout.field_workout_session_create_date
+msgid "Created on"
+msgstr "Creado"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: workout
+#: model:ir.model.fields,help:workout.field_workout_session_currency_id
+msgid "Currency."
+msgstr "Moneda."
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_session_date
+msgid "Date"
+msgstr "Fecha"
+
+#. module: workout
+#: code:addons/workout/models/session.py:45
+#, python-format
+msgid "Date Warning"
+msgstr "Advertencia Fecha"
+
+#. module: workout
+#: code:addons/workout/models/session.py:46
+#, python-format
+msgid "Date can not be before today"
+msgstr "La fecha no puede ser anterior al dia de hoy"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_display_name
+#: model:ir.model.fields,field_description:workout.field_workout_category_display_name
+#: model:ir.model.fields,field_description:workout.field_workout_session_display_name
+msgid "Display Name"
+msgstr "Nombre a Mostrar"
+
+#. module: workout
+#: selection:workout.session,state:0
+msgid "Done"
+msgstr "Realizado"
+
+#. module: workout
+#: selection:workout.session,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: workout
+#: selection:workout.category,type:0
+msgid "Endurance"
+msgstr "Fuerza"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_id
+#: model:ir.model.fields,field_description:workout.field_workout_category_id
+#: model:ir.model.fields,field_description:workout.field_workout_session_id
+msgid "ID"
+msgstr "ID"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session___last_update
+#: model:ir.model.fields,field_description:workout.field_workout_category___last_update
+#: model:ir.model.fields,field_description:workout.field_workout_session___last_update
+msgid "Last Modified on"
+msgstr "Fecha de modificación"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_write_uid
+#: model:ir.model.fields,field_description:workout.field_workout_category_write_uid
+#: model:ir.model.fields,field_description:workout.field_workout_session_write_uid
+msgid "Last Updated by"
+msgstr "Ultima Actualización por"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_write_date
+#: model:ir.model.fields,field_description:workout.field_workout_category_write_date
+#: model:ir.model.fields,field_description:workout.field_workout_session_write_date
+msgid "Last Updated on"
+msgstr "Actualizado en"
+
+#. module: workout
+#: model:ir.model.fields,help:workout.field_workout_session_attendee_ids
+msgid "List of atendees."
+msgstr "List of asistentes."
+
+#. module: workout
+#: model:ir.ui.menu,name:workout.members
+#: model:ir.ui.menu,name:workout.memberslist
+msgid "Members"
+msgstr "Miembros"
+
+#. module: workout
+#: selection:workout.category,type:0
+msgid "Muscle"
+msgstr "Musculatura"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_category_name
+msgid "Name"
+msgstr "Nombre"
+
+#. module: workout
+#: model:ir.ui.view,arch_db:workout.partner_session_view_form
+msgid "Partner Session Wizard"
+msgstr "Asistente para Sessiones de Asistentes"
+
+#. module: workout
+#: model:ir.model,name:workout.model_partner_session
+msgid "Partner Workout Session Wizard"
+msgstr "Asistente para Sesión de entrenamiento"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_price_per_session
+msgid "Price Per Session"
+msgstr "Precio por Sesión"
+
+#. module: workout
+#: selection:workout.category,type:0
+msgid "Relax"
+msgstr "Relax"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_responsible_id
+msgid "Responsible User"
+msgstr "Usuario Responsable"
+
+#. module: workout
+#: model:ir.model.fields,help:workout.field_workout_session_responsible_id
+msgid "Responsible User for session."
+msgstr "Usuario responsable por la sesión."
+
+#. module: workout
+#: model:ir.ui.view,arch_db:workout.workout_category_view_search
+msgid "Search Category"
+msgstr "Buscar Categoría"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_seats
+msgid "Seats"
+msgstr "Espacios"
+
+#. module: workout
+#: model:ir.model.fields,help:workout.field_workout_session_seats
+msgid "Seats available"
+msgstr "Espacios disponibles"
+
+#. module: workout
+#: model:ir.model.fields,help:workout.field_workout_session_coach_id
+msgid "Select coach."
+msgstr "Seleccionar entrengador."
+
+#. module: workout
+#: model:ir.ui.menu,name:workout.session_menu
+#: model:ir.ui.view,arch_db:workout.workout_session_view_form
+msgid "Session"
+msgstr "Sesión"
+
+#. module: workout
+#: model:ir.model,name:workout.model_workout_session
+msgid "Session schedule for workout classes"
+msgstr "Horario de sesiones para clases de entrenamiento"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_partner_session_session_wiz_ids
+msgid "Sessions"
+msgstr "Sesiones"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_state
+msgid "State"
+msgstr "Estado"
+
+#. module: workout
+#: model:ir.ui.view,arch_db:workout.partner_session_view_form
+msgid "Subscribe"
+msgstr "Suscribir"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_session_taken_seats
+msgid "Taken Seats"
+msgstr "Asientos Reservados"
+
+#. module: workout
+#: model:ir.model.fields,field_description:workout.field_workout_category_type
+msgid "Type"
+msgstr "Tipo"
+
+#. module: workout
+#: model:ir.ui.menu,name:workout.menu_root
+#: model:ir.ui.view,arch_db:workout.view_partner_form_workout_attendee
+msgid "Workout"
+msgstr "Entrenamiento"
+
+#. module: workout
+#: model:res.groups,name:workout.workout_manager
+msgid "Workout / Manager"
+msgstr "Entrenamiento / Administrador"
+
+#. module: workout
+#: model:res.groups,name:workout.workout_user
+msgid "Workout / User"
+msgstr "Entrenamiento / Usuario"
+
+#. module: workout
+#: model:ir.model.fields,help:workout.field_workout_session_category_id
+msgid "Workout Category"
+msgstr "Categoría de Entrenamiento"
+
+#. module: workout
+#: model:ir.ui.menu,name:workout.management
+msgid "Workout Management"
+msgstr "Entrenamiento Administrador"
+
+#. module: workout
+#: model:ir.ui.view,arch_db:workout.workout_session_view_tree
+msgid "Workout Session"
+msgstr "Sesión de entrenamiento"
+
+#. module: workout
+#: model:ir.model,name:workout.model_workout_category
+msgid "workout.category"
+msgstr "workout.category"
+
+#. module: workout
+#: model:ir.actions.act_window,name:workout.category_action
+msgid "workout_category_tree"
+msgstr "workout_category_tree"
+
+#. module: workout
+#: model:ir.actions.act_window,name:workout.members_action
+msgid "workout_members_action"
+msgstr "workout_members_action"
+
+#. module: workout
+#: model:ir.actions.act_window,name:workout.session_action
+msgid "workout_session_tree"
+msgstr "workout_session_tree"
+

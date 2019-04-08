@@ -17,6 +17,9 @@
                         </group>
                     </page>
                 </xpath>
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button type="object" name="partners_by_country" icon="fa-binoculars"></button>
+                </xpath>
             </field>
         </record>
     </data>

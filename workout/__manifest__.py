@@ -23,7 +23,7 @@
     'version': '11.0.0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
@@ -34,7 +34,8 @@
         'views/session_view.xml',
         'views/workout_wizard_view.xml',
         'data/categories.xml',
-        # 'views/templates.xml',
+        'report/session_template.xml',
+        'report/session_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

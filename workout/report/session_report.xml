@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report id="session_attendee_report" 
+            name="workout.session_report_template"
+            model="workout.session"
+            string="Asistentes"
+            report_type="qweb-pdf"></report>
+</odoo>

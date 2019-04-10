@@ -14,6 +14,7 @@ _logger = logging.getLogger(__name__)
 class WorkoutSession(models.Model):
     _name = 'workout.session'
     _description = 'Session schedule for workout classes'
+    _inherit = ['mail.thread']
 
     @api.multi
     def name_get(self):
@@ -84,7 +85,7 @@ class WorkoutSession(models.Model):
         help="List of atendees.",
     )
 
-    session_date = fields.Datetime(string="Date", )
+    session_date = fields.Datetime(string="Date", track_visibility=True )
     taken_seats = fields.Integer(string="Taken Seats", )
     seats = fields.Integer(string="Seats", help="Seats available" )
     attendees_count = fields.Integer(
@@ -113,4 +114,8 @@ class WorkoutSession(models.Model):
         for session in self:
             session.attendees_count = len(session.attendee_ids)
 
+    def _track_subtype(self, init_values):
+        if 'session_date' in init_values:
+            return 'mail.mt_comment'
+        return False
 

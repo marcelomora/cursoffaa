@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="workout.session_report_template">
+    <t t-call="web.html_container">
+    <t t-foreach="docs" t-as="doc">
+    <t t-call="web.internal_layout">
+    <div class="page">
+        <div class="oe_structure">
+            <h1>Asistentes Para <t t-esc="doc.category_id.name"></t></h1>
+            <h2>
+                <t t-esc="doc.session_date"></t>
+            </h2>
+            <table class="table table-condensed">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr t-foreach="doc.attendee_ids" t-as="attendee">
+                    <td>
+                        <t t-esc="attendee.name"></t>
+                    </td>
+                    <td>
+                        <t t-if="attendee.phone">
+                            <span t-esc="attendee.phone"></span>
+                        </t>
+                        <t t-else="">
+                            <span>No tiene telefono</span>
+                        </t>
+                    </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </t>
+    </t>
+    </t>
+
+    </template>
+</odoo>
